@@ -1,0 +1,38 @@
+/* colores principales */
+
+
+/* uso de mapas */
+
+$color-secundario: (
+  "color-secundario": #ffb936
+);
+
+$theme-colors: map-merge($theme-colors, $color-secundario);
+
+/* estilo tipografia */
+
+$font-family-sans-serif:'Roboto', sans-serif;
+
+
+/* uso de extend */
+
+%titulos{
+    font-size: 5px;
+    font-weight: bold;
+    line-height: 1%;
+}
+
+h1{
+    text-align: center;
+    @extend %titulos;
+}
+
+/* uso de mixing */
+
+@mixin texto ($subrayado) {
+    text-decoration: $subrayado
+}
+
+.card-text{
+    @include texto(underline);
+}
